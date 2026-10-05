@@ -1,5 +1,6 @@
 ## Unreleased
 
+* Constrain generated transaction values to the sender's current balance, preventing transactions that would be rejected before execution (#1556)
 * New `verification` test mode to symbolically verify each function of a contract using a single transaction, instead of configuring the symbolic worker by hand (#1595)
 * Foundry mode now follows Foundry's function naming conventions more closely: `invariant`- and `statefulFuzz`-prefixed functions are stateful invariants, and `testFail`-prefixed tests are expected to revert (#1595)
 * Foundry mode now only calls parameterized `test` functions when `seqLen` is 1, matching Foundry's stateless fuzzing (#1595)
